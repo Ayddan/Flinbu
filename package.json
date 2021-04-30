@@ -1,0 +1,17 @@
+{
+  "name": "ecf-ratrapage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/style.scss css/style.css --watch"
+  },
+  "author": "Nathan Leduc",
+  "license": "ISC",
+  "dependencies": {
+    "locomotive-scroll": "^4.1.0",
+    "smooth-scrollbar": "^8.6.1"
+  },
+  "keywords": [],
+  "description": ""
+}

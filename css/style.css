@@ -1,0 +1,649 @@
+@charset "UTF-8";
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v15-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v15-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v15-latin-regular.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-regular.woff") format("woff"), url("../fonts/montserrat-v15-latin-regular.ttf") format("truetype"), url("../fonts/montserrat-v15-latin-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v15-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/montserrat-v15-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v15-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v15-latin-700.woff") format("woff"), url("../fonts/montserrat-v15-latin-700.ttf") format("truetype"), url("../fonts/montserrat-v15-latin-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nunito-v16-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/nunito-v16-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito-v16-latin-regular.woff2") format("woff2"), url("../fonts/nunito-v16-latin-regular.woff") format("woff"), url("../fonts/nunito-v16-latin-regular.ttf") format("truetype"), url("../fonts/nunito-v16-latin-regular.svg#Nunito") format("svg");
+  /* Legacy iOS */
+}
+/* nunito-700 - latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/nunito-v16-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/nunito-v16-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito-v16-latin-700.woff2") format("woff2"), url("../fonts/nunito-v16-latin-700.woff") format("woff"), url("../fonts/nunito-v16-latin-700.ttf") format("truetype"), url("../fonts/nunito-v16-latin-700.svg#Nunito") format("svg");
+  /* Legacy iOS */
+}
+html {
+  font-size: 0.625em;
+  /* fallback IE8+ */
+  font-size: calc(1em * .625);
+  /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  scroll-behavior: smooth;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* Set text selection */
+::-moz-selection {
+  color: #000;
+  background-color: #fd0;
+}
+
+::selection {
+  color: #000;
+  background-color: #fd0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make medias easier to work with */
+img,
+video,
+audio {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Natural flow and rhythm in articles by default 
+    Pose des problèmes - intéressant mais difficile à utiliser */
+/* article > * + * {
+  margin-top: 1em;
+} */
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set cursor pointer */
+label[for],
+button,
+input[type=submit],
+select {
+  cursor: pointer;
+}
+
+/* Remove font style on address */
+address {
+  font-style: normal;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* Image replacement technique 2012 H5BP  - https://css-tricks.com/the-image-replacement-museum/ */
+.ir {
+  font: 0/0 a;
+  color: transparent;
+  border: 0;
+  text-shadow: none;
+}
+
+/* Phone links active only under 36em (576px) */
+a[href^=tel] {
+  white-space: nowrap;
+  pointer-events: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 36em) {
+  a[href^=tel] {
+    pointer-events: auto;
+    text-decoration: underline;
+  }
+}
+/* Print external URLs */
+@media print {
+  a {
+    text-decoration: underline;
+  }
+
+  a[href]:not([href^="#"])::after {
+    content: "(" attr(href) ")";
+  }
+}
+a.orange-button,
+input.orange-button {
+  margin-right: 1.6rem;
+  background-color: #E95841;
+  box-shadow: 0px 5px 10px #E9584129;
+  padding: 1.4rem 3rem;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  color: #fff;
+  border: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+a.orange-button:visited,
+input.orange-button:visited {
+  color: #fff;
+}
+a.orange-button:hover,
+input.orange-button:hover {
+  color: #E95841;
+  background-color: #fff;
+}
+
+a.white-button {
+  background-color: #fff;
+  box-shadow: 0px 5px 10px #E9584129;
+  padding: 1.4rem 3rem;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  color: #E95841;
+  transition: color 0.3s, background-color 0.3s;
+}
+a.white-button:visited {
+  color: #E95841;
+}
+a.white-button:hover {
+  color: #fff;
+  background-color: #E95841;
+}
+
+.burger-button {
+  display: none;
+  background-color: none;
+  border: none;
+}
+.burger-button span {
+  display: block;
+  width: 30px;
+  height: 0.4rem;
+  margin-bottom: 0.5rem;
+  background-color: #333333;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 6.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #181818;
+  font-weight: normal;
+}
+
+h2 {
+  margin-bottom: 2.7rem;
+  font-size: 5.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #181818;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.6rem;
+  color: #181818;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: Nunito, sans-serif;
+  line-height: 3rem;
+  color: #333333;
+}
+
+.container {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 108.8rem;
+}
+
+.sub-title {
+  margin-bottom: 2rem;
+}
+
+.separator {
+  margin-bottom: 2rem;
+  display: block;
+  width: 8.8rem;
+  background-color: #E95841;
+  height: 0.5rem;
+}
+
+.social-links {
+  width: 16.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.social-links li {
+  opacity: 0.5;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.social-links li:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+p.ability-slogan {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #E95841;
+}
+
+.main-text {
+  margin-bottom: 3.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+a:visited {
+  color: #333333;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #F0F0F0;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  color: #333333;
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+header nav ul li {
+  position: relative;
+  margin-left: 2.5rem;
+}
+header nav ul li::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 0;
+  background-color: #E95841;
+  height: 0.5rem;
+  transition: width 0.5s;
+}
+header nav ul li:hover a {
+  color: #E95841;
+}
+header nav ul li:hover::after {
+  left: 0;
+  width: 100%;
+}
+header nav ul .is-active a {
+  color: #E95841;
+}
+
+.hero {
+  background-color: #F0F0F0;
+  padding-top: 6.5rem;
+  padding-bottom: 14.6rem;
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+}
+.hero .container .text-content {
+  max-width: 53rem;
+}
+.hero .container .image-and-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.abilities {
+  background-color: #F9F9F9;
+}
+.abilities .ability-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.abilities .ability-section:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.creation-process {
+  background-color: #F9F9F9;
+  padding-bottom: 11.2rem;
+}
+.creation-process .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.creation-process .container h2 {
+  margin-bottom: 4rem;
+}
+.creation-process .container .creation-steps-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+}
+.creation-process .container .creation-steps-wrapper h3 span {
+  color: #E95841;
+}
+.creation-process .container .creation-steps-wrapper .creation-step {
+  padding: 3.4rem;
+  background-color: #fff;
+  box-shadow: 0px 14px 40px #00000014;
+}
+
+.contact {
+  padding-bottom: 11.2rem;
+  background-color: #F9F9F9;
+}
+.contact .container {
+  display: flex;
+}
+.contact .container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.contact .container form label {
+  margin-bottom: 1.4rem;
+  font-size: 1.8rem;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+  color: #333333;
+}
+.contact .container form input:not(.orange-button) {
+  margin-bottom: 2.4rem;
+  padding: 1.4rem 3rem;
+  width: 53rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-family: Nunito, sans-serif;
+  font-weight: 700;
+}
+.contact .container form textarea {
+  width: 100%;
+  height: 16rem;
+  margin-bottom: 4rem;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+}
+.contact .container .social-links {
+  width: 25rem;
+}
+.contact .container .social-links .social-item {
+  transition: transform 0.3s, opacity 0.3s;
+}
+.contact .container .social-links .social-item:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+footer {
+  padding: 4.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-logo {
+  display: flex;
+  align-items: center;
+}
+footer .footer-logo img {
+  margin-right: 1.7rem;
+}
+footer .footer-logo p {
+  font-size: 1.4rem;
+}
+footer .footer-logo p span {
+  font-family: Montserrat, sans-serif;
+  font-size: 3.7rem;
+  color: #181818;
+}
+
+/*---------------------  responsive  -----------------*/
+@media screen and (max-width: 1125px) {
+  h1 {
+    font-size: 4.4rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .container {
+    max-width: 80rem;
+  }
+
+  p.ability-slogan {
+    font-size: 1.4rem;
+  }
+
+  .hero .container .text-content {
+    max-width: 41rem;
+  }
+
+  .abilities img {
+    width: 40rem;
+  }
+
+  .abilities .ability-section:not(:last-of-type) {
+    margin-bottom: 5rem;
+  }
+
+  .abilities .ability-section:last-of-type {
+    padding-bottom: 5rem;
+  }
+
+  .creation-process .container .creation-steps-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact .container form input:not(.orange-button) {
+    width: 40rem;
+  }
+
+  footer .footer-logo p span {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  header nav ul {
+    width: 18rem;
+    position: absolute;
+    left: 100%;
+    top: 6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    background-color: #F0F0F0;
+  }
+  header nav ul li {
+    margin-bottom: 1rem;
+  }
+  header nav .burger-button {
+    display: block;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+  .text-content .separator {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .abilities .ability-section {
+    flex-direction: column;
+  }
+  .abilities .ability-section:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .creation-process .container .creation-steps-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact .container {
+    flex-direction: column;
+  }
+  .contact .container ul {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+  }
+  .contact .container form {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 590px) {
+  footer {
+    flex-direction: column;
+  }
+  footer .footer-logo {
+    margin-bottom: 5rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttons-wrapper a.orange-button {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+
+  footer .footer-logo p span {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
