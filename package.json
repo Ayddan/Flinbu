@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass scss/style.scss css/style.css --watch",
-    "build": "vercel build --output public"
+    "build": "build --output public"
   },
   "author": "Nathan Leduc",
   "license": "ISC",
